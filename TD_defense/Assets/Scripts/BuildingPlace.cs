@@ -1,0 +1,70 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BuildingPlace : MonoBehaviour
+{
+    public GameObject Place;
+    private double ScaleX = 0.1;
+    private double ScaleY = 0.1;
+    private double ScaleZ = 0.1;
+
+    
+   
+
+
+    void Start()
+    {
+
+        
+        GameObject prefab = (Resources.Load("Plane")) as GameObject;
+
+        if (prefab == null)
+        {
+            Debug.Log("je tam");
+        }
+        else
+        {
+            Debug.Log("lolololo");
+        }
+
+
+
+
+
+        Place = this.gameObject;
+        Place.name = "Plane";
+
+
+       
+        Place.AddComponent<MeshCollider>();
+        Place.AddComponent<MeshRenderer>();
+        Place.AddComponent<MeshFilter>();
+        
+        // nastaveni velikosti stavebni parcely
+        Transform transform = Place.GetComponent<Transform>();
+        Vector3 scale = new Vector3 (0.1f, 0.1f, 0.1f);
+        transform.localScale = scale;
+
+        MeshFilter MeshF = Place.GetComponent<MeshFilter>();
+        MeshF.sharedMesh = prefab.GetComponent<MeshFilter>().sharedMesh;
+
+
+
+
+        MeshCollider MeshC = Place.GetComponent<MeshCollider>();
+        MeshC.sharedMesh = prefab.GetComponent<MeshFilter>().sharedMesh;
+
+
+        MeshRenderer MeshR = GetComponent<MeshRenderer>();
+        MeshR.sharedMaterial = prefab.GetComponent<MeshRenderer>().sharedMaterial;
+
+
+    }
+
+    
+    void Update()
+    {
+        
+    }
+}

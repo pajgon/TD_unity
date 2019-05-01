@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class Spawn : MonoBehaviour
 {
@@ -15,18 +16,18 @@ public class Spawn : MonoBehaviour
     public int deathUnits = 0;
     public int maxUnits = 3;
     public float nextWave = 15.0f;
-  
     
 
 
-    public GameObject Unit;
-    //public gameobject[] Units;
+
+    
+
 
     void Start()
     {
+        
 
-        
-        
+
         arrayPoints = GetComponentsInChildren<Transform>();
 
         foreach (Transform path_obj in arrayPoints)
@@ -50,6 +51,7 @@ public class Spawn : MonoBehaviour
          InvokeRepeating("SpawnUnit", SpawnTime, SpawnTime);
        
     }
+    
 
     
     void Update()
@@ -65,8 +67,20 @@ public class Spawn : MonoBehaviour
 
         if (num)
         {
+            GameObject m = Resources.Load("Enemy") as GameObject;
+
+            if (m == null)
+            {
+                Debug.Log("neni tam");
+            }
+            else
+            {
+                Debug.Log("NOT NULL");
+            }
+
+
             int spawnIndex = 0;
-            Instantiate(Unit, checkpoints[spawnIndex].position, checkpoints[spawnIndex].rotation);
+            Instantiate(m, checkpoints[spawnIndex].position, checkpoints[spawnIndex].rotation);
             
             currentUnits++;
             

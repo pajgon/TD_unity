@@ -9,11 +9,11 @@ public class MoveOnPath : MonoBehaviour
    
 
 
-
+    
 
 
     public int CurrenWayPointID = 0;
-    public float speed = 6f;
+    public float speed = 2f;
     private float reachDistance = 1f;
     public float rotationspeed = 5.0f;
     public string pathName;
