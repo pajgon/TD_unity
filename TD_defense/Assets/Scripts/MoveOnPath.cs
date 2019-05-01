@@ -17,6 +17,7 @@ public class MoveOnPath : MonoBehaviour
     private float reachDistance = 1f;
     public float rotationspeed = 5.0f;
     public string pathName;
+    public float HP = 50f;
     
   
 
@@ -60,6 +61,10 @@ public class MoveOnPath : MonoBehaviour
             
             
         }
+        if (HP <= 0)
+        {
+            Destroy(this.gameObject);
+;        }
     }
     
 
