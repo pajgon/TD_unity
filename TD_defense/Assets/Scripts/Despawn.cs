@@ -12,8 +12,8 @@ public class Despawn : MonoBehaviour
     }
 
     public void OnTriggerEnter(Collider enemy)
-    { MoveOnPath parent = enemy.GetComponentInParent<MoveOnPath>();
-        Destroy(parent.gameObject);
+    {// MoveOnPath parent = enemy.GetComponent<MoveOnPath>();
+        Destroy(enemy.gameObject);
         spawn.currentUnits--;
         
        

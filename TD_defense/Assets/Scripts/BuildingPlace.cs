@@ -9,11 +9,16 @@ public class BuildingPlace : MonoBehaviour
     private double ScaleY = 0.1;
     private double ScaleZ = 0.1;
 
-    
-   
+
+    public Color rayColor = Color.white;
+    void OnDrawGizmos()
+    {
+        Gizmos.color = rayColor;
+        Gizmos.DrawCube(gameObject.transform.position, new Vector3(1, 0.1f, 1));
+    }
 
 
-    void Start()
+        void Start()
     {
 
         

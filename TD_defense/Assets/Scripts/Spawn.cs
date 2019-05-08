@@ -16,6 +16,8 @@ public class Spawn : MonoBehaviour
     public int deathUnits = 0;
     public int maxUnits = 3;
     public float nextWave = 15.0f;
+
+    private GameObject animal;
     
 
 
@@ -26,7 +28,7 @@ public class Spawn : MonoBehaviour
     void Start()
     {
         
-
+        animal = Resources.Load("Animal") as GameObject;
 
         arrayPoints = GetComponentsInChildren<Transform>();
 
@@ -67,27 +69,17 @@ public class Spawn : MonoBehaviour
 
         if (num)
         {
-            GameObject m = Resources.Load("Enemy") as GameObject;
+            GameObject m = animal;
 
-            if (m == null)
-            {
-                Debug.Log("neni tam");
-            }
-            else
-            {
-                Debug.Log("NOT NULL");
-            }
-
-
+           
             int spawnIndex = 0;
+            m.name = "Enemy";
+            m.tag = "Enemy";
             Instantiate(m, checkpoints[spawnIndex].position, checkpoints[spawnIndex].rotation);
             
             currentUnits++;
             
-            
-            
-
-
+       
 
         }
 

@@ -10,12 +10,20 @@ public class Tower : MonoBehaviour
     private bool firing = false;
     public float range = 7f;
     public string enemyTag = "Enemy";
+
+    public GameObject bullet;
+    public Transform firepoint;
     
+    
+   
+
+
 
 
 
     private void Start()
     {
+        bullet = (Resources.Load("Bullet")) as GameObject;
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
 
@@ -98,8 +106,17 @@ public class Tower : MonoBehaviour
     // strelba
     private void Fire(Transform enemyGameobject)
     {
-        MoveOnPath target = enemyGameobject.GetComponentInParent<MoveOnPath>();
-        target.HP -= damage;
+        MoveOnPath HP = enemyGameobject.GetComponentInParent<MoveOnPath>();
+        GameObject BulletGO =  (GameObject)Instantiate(bullet, firepoint.position, gameObject.transform.rotation);
+        Shot shot = BulletGO.GetComponent<Shot>();
+
+        shot.tower = this.gameObject.GetComponent<Tower>();
+
+        if (shot != null)
+        {
+            shot.seek(target);
+        }
+       
 
 
     }
