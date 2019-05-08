@@ -24,19 +24,7 @@ public class BuildingPlace : MonoBehaviour
         
         GameObject prefab = (Resources.Load("Plane")) as GameObject;
 
-        if (prefab == null)
-        {
-            Debug.Log("je tam");
-        }
-        else
-        {
-            Debug.Log("lolololo");
-        }
-
-
-
-
-
+        
         Place = this.gameObject;
         Place.name = "Plane";
 

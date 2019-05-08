@@ -8,6 +8,7 @@ public class Shot : MonoBehaviour
     private Transform target;
     private MoveOnPath HP;
     public Tower tower;
+    
 
     public float speed = 10f;
 
@@ -19,7 +20,7 @@ public class Shot : MonoBehaviour
 
     void Start()
     {
-       
+        
     }
 
    

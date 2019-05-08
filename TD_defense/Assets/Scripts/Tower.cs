@@ -9,6 +9,7 @@ public class Tower : MonoBehaviour
     public float AttackPerSec = 1f;
     private bool firing = false;
     public float range = 7f;
+    public float cost = 2f;
     public string enemyTag = "Enemy";
 
     public GameObject bullet;

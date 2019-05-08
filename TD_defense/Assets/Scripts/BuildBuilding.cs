@@ -13,8 +13,8 @@ public class BuildBuilding : MonoBehaviour
     public float PosY;
     public float PosZ;
     
-    public Color rayColor = Color.white;
-    GameObject tower;
+   
+    
     public GameObject plane;
 
     public void Start()
@@ -24,32 +24,10 @@ public class BuildBuilding : MonoBehaviour
 
         ui = camera.GetComponent<UI>();
 
-        
-
-
-
-
-
-         tower = (Resources.Load("War_Tower")) as GameObject;
-        if (tower != null)
-        {
-            Debug.Log("je to tam");
-        }
-
-        else
-        {
-            Debug.Log("nope neni to tam");
-        }
-
+    
     }
 
-    void OnDrawGizmos()
-    {
-        Gizmos.color = rayColor;
-    }
-
-
-  
+    
 
 
 
@@ -79,10 +57,7 @@ public class BuildBuilding : MonoBehaviour
                     ui.BuildNode.SetActive(true);
 
 
-                   // build.build(tower, PosX, PosY, PosZ);
-                   
-                   // rhinfo.collider.gameObject.SetActive(false);
-                    
+                                      
                 }
                 else
                 {

@@ -334,6 +334,7 @@ MonoBehaviour:
   damage: 10
   AttackPerSec: 1
   range: 7
+  cost: 8
   enemyTag: Enemy
   bullet: {fileID: 0}
   firepoint: {fileID: 2605887225115052069}
