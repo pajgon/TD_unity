@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class Despawn : MonoBehaviour
 {
-    public Spawn spawn;
+   
+    private UI ui;
 
     private void Start()
     {
-        spawn = GetComponentInParent<Spawn>();
+        GameObject camera = new GameObject();
+        camera = GameObject.FindGameObjectWithTag("MainCamera");
+
+        ui = camera.GetComponent<UI>();
+        
     }
 
     public void OnTriggerEnter(Collider enemy)
-    {// MoveOnPath parent = enemy.GetComponent<MoveOnPath>();
+    {
         Destroy(enemy.gameObject);
-        spawn.currentUnits--;
+        ui.Lives--;
+        
         
        
     }

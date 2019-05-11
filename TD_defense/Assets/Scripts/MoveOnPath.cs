@@ -16,6 +16,7 @@ public class MoveOnPath : MonoBehaviour
     public float rotationspeed = 5.0f;
     public string pathName;
     public float HP = 50f;
+    public float cost = 5;
     
   
 
@@ -55,7 +56,7 @@ public class MoveOnPath : MonoBehaviour
        
         if (HP <= 0)
         {
-            ui.Money = ui.Money + 2;
+            ui.Money = ui.Money + cost;
             Destroy(this.gameObject);
 ;        }
     }

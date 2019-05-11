@@ -1,0 +1,185 @@
+fileFormatVersion: 2
+guid: 7e25b7d0ed2b57347be4666a80870278
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: DrevoVnitrekSvetlejsi1
+    100002: DrevoVnitrekSvetlejsi2
+    100004: DrevoVnitrekSvetlejsi3
+    100006: DrevoVnitrekSvetlejsi4
+    100008: DrevoVnitrekSvetlejsi5
+    100010: DrevoVnitrekSvetlejsi6
+    100012: DrevoVnitrekSvetlejsi7
+    100014: DrevoVnitrekSvetlejsi8
+    100016: "D\u0159evoVOhni"
+    100018: kamenyVOhni
+    100020: //RootNode
+    100022: "podstavaOhn\u011B"
+    100024: pPlatonic1
+    100026: pPlatonic2
+    100028: pPlatonic3
+    100030: pPlatonic4
+    100032: pPlatonic5
+    100034: pPlatonic6
+    100036: pPlatonic7
+    100038: pPlatonic8
+    400000: DrevoVnitrekSvetlejsi1
+    400002: DrevoVnitrekSvetlejsi2
+    400004: DrevoVnitrekSvetlejsi3
+    400006: DrevoVnitrekSvetlejsi4
+    400008: DrevoVnitrekSvetlejsi5
+    400010: DrevoVnitrekSvetlejsi6
+    400012: DrevoVnitrekSvetlejsi7
+    400014: DrevoVnitrekSvetlejsi8
+    400016: "D\u0159evoVOhni"
+    400018: kamenyVOhni
+    400020: //RootNode
+    400022: "podstavaOhn\u011B"
+    400024: pPlatonic1
+    400026: pPlatonic2
+    400028: pPlatonic3
+    400030: pPlatonic4
+    400032: pPlatonic5
+    400034: pPlatonic6
+    400036: pPlatonic7
+    400038: pPlatonic8
+    2100000: blinn3
+    2100002: lambert5
+    2100004: blinn2
+    2300000: DrevoVnitrekSvetlejsi1
+    2300002: DrevoVnitrekSvetlejsi2
+    2300004: DrevoVnitrekSvetlejsi3
+    2300006: DrevoVnitrekSvetlejsi4
+    2300008: DrevoVnitrekSvetlejsi5
+    2300010: DrevoVnitrekSvetlejsi6
+    2300012: DrevoVnitrekSvetlejsi7
+    2300014: DrevoVnitrekSvetlejsi8
+    2300016: "podstavaOhn\u011B"
+    2300018: pPlatonic1
+    2300020: pPlatonic2
+    2300022: pPlatonic3
+    2300024: pPlatonic4
+    2300026: pPlatonic5
+    2300028: pPlatonic6
+    2300030: pPlatonic7
+    2300032: pPlatonic8
+    3300000: DrevoVnitrekSvetlejsi1
+    3300002: DrevoVnitrekSvetlejsi2
+    3300004: DrevoVnitrekSvetlejsi3
+    3300006: DrevoVnitrekSvetlejsi4
+    3300008: DrevoVnitrekSvetlejsi5
+    3300010: DrevoVnitrekSvetlejsi6
+    3300012: DrevoVnitrekSvetlejsi7
+    3300014: DrevoVnitrekSvetlejsi8
+    3300016: "podstavaOhn\u011B"
+    3300018: pPlatonic1
+    3300020: pPlatonic2
+    3300022: pPlatonic3
+    3300024: pPlatonic4
+    3300026: pPlatonic5
+    3300028: pPlatonic6
+    3300030: pPlatonic7
+    3300032: pPlatonic8
+    4300000: "podstavaOhn\u011B"
+    4300002: DrevoVnitrekSvetlejsi5
+    4300004: DrevoVnitrekSvetlejsi7
+    4300006: DrevoVnitrekSvetlejsi3
+    4300008: DrevoVnitrekSvetlejsi6
+    4300010: DrevoVnitrekSvetlejsi4
+    4300012: DrevoVnitrekSvetlejsi1
+    4300014: DrevoVnitrekSvetlejsi2
+    4300016: DrevoVnitrekSvetlejsi8
+    4300018: pPlatonic2
+    4300020: pPlatonic4
+    4300022: pPlatonic7
+    4300024: pPlatonic8
+    4300026: pPlatonic5
+    4300028: pPlatonic6
+    4300030: pPlatonic1
+    4300032: pPlatonic3
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

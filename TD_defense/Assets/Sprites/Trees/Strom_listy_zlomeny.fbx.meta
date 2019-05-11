@@ -1,0 +1,216 @@
+fileFormatVersion: 2
+guid: 6f21df26321b7d54a981b313f6ffd606
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Stromy_listy_hotove:Parez
+    100004: Stromy_listy_hotove:pCylinder1
+    100006: Stromy_listy_hotove:pCylinder11
+    100008: Stromy_listy_hotove:pCylinder12
+    100010: Stromy_listy_hotove:pCylinder13
+    100012: Stromy_listy_hotove:pCylinder14
+    100014: Stromy_listy_hotove:pCylinder15
+    100016: Stromy_listy_hotove:pCylinder17
+    100018: Stromy_listy_hotove:pCylinder18
+    100020: Stromy_listy_hotove:pCylinder19
+    100022: Stromy_listy_hotove:pCylinder20
+    100024: Stromy_listy_hotove:pCylinder3
+    100026: Stromy_listy_hotove:pCylinder4
+    100028: Stromy_listy_hotove:pCylinder5
+    100030: Stromy_listy_hotove:pCylinder6
+    100032: Stromy_listy_hotove:pCylinder8
+    100034: Stromy_listy_hotove:pPlatonic10
+    100036: Stromy_listy_hotove:pPlatonic11
+    100038: Stromy_listy_hotove:pPlatonic14
+    100040: Stromy_listy_hotove:pPlatonic15
+    100042: Stromy_listy_hotove:pPlatonic16
+    100044: Stromy_listy_hotove:pPlatonic17
+    100046: Stromy_listy_hotove:pPlatonic8
+    100048: Stromy_listy_hotove:pPlatonic9
+    100050: Stromy_listy_hotove:Strom
+    400000: //RootNode
+    400002: Stromy_listy_hotove:Parez
+    400004: Stromy_listy_hotove:pCylinder1
+    400006: Stromy_listy_hotove:pCylinder11
+    400008: Stromy_listy_hotove:pCylinder12
+    400010: Stromy_listy_hotove:pCylinder13
+    400012: Stromy_listy_hotove:pCylinder14
+    400014: Stromy_listy_hotove:pCylinder15
+    400016: Stromy_listy_hotove:pCylinder17
+    400018: Stromy_listy_hotove:pCylinder18
+    400020: Stromy_listy_hotove:pCylinder19
+    400022: Stromy_listy_hotove:pCylinder20
+    400024: Stromy_listy_hotove:pCylinder3
+    400026: Stromy_listy_hotove:pCylinder4
+    400028: Stromy_listy_hotove:pCylinder5
+    400030: Stromy_listy_hotove:pCylinder6
+    400032: Stromy_listy_hotove:pCylinder8
+    400034: Stromy_listy_hotove:pPlatonic10
+    400036: Stromy_listy_hotove:pPlatonic11
+    400038: Stromy_listy_hotove:pPlatonic14
+    400040: Stromy_listy_hotove:pPlatonic15
+    400042: Stromy_listy_hotove:pPlatonic16
+    400044: Stromy_listy_hotove:pPlatonic17
+    400046: Stromy_listy_hotove:pPlatonic8
+    400048: Stromy_listy_hotove:pPlatonic9
+    400050: Stromy_listy_hotove:Strom
+    2100000: lambert1
+    2300000: Stromy_listy_hotove:Parez
+    2300002: Stromy_listy_hotove:pCylinder1
+    2300004: Stromy_listy_hotove:pCylinder11
+    2300006: Stromy_listy_hotove:pCylinder12
+    2300008: Stromy_listy_hotove:pCylinder13
+    2300010: Stromy_listy_hotove:pCylinder14
+    2300012: Stromy_listy_hotove:pCylinder15
+    2300014: Stromy_listy_hotove:pCylinder17
+    2300016: Stromy_listy_hotove:pCylinder18
+    2300018: Stromy_listy_hotove:pCylinder19
+    2300020: Stromy_listy_hotove:pCylinder20
+    2300022: Stromy_listy_hotove:pCylinder3
+    2300024: Stromy_listy_hotove:pCylinder4
+    2300026: Stromy_listy_hotove:pCylinder5
+    2300028: Stromy_listy_hotove:pCylinder6
+    2300030: Stromy_listy_hotove:pCylinder8
+    2300032: Stromy_listy_hotove:pPlatonic10
+    2300034: Stromy_listy_hotove:pPlatonic11
+    2300036: Stromy_listy_hotove:pPlatonic14
+    2300038: Stromy_listy_hotove:pPlatonic15
+    2300040: Stromy_listy_hotove:pPlatonic16
+    2300042: Stromy_listy_hotove:pPlatonic17
+    2300044: Stromy_listy_hotove:pPlatonic8
+    2300046: Stromy_listy_hotove:pPlatonic9
+    3300000: Stromy_listy_hotove:Parez
+    3300002: Stromy_listy_hotove:pCylinder1
+    3300004: Stromy_listy_hotove:pCylinder11
+    3300006: Stromy_listy_hotove:pCylinder12
+    3300008: Stromy_listy_hotove:pCylinder13
+    3300010: Stromy_listy_hotove:pCylinder14
+    3300012: Stromy_listy_hotove:pCylinder15
+    3300014: Stromy_listy_hotove:pCylinder17
+    3300016: Stromy_listy_hotove:pCylinder18
+    3300018: Stromy_listy_hotove:pCylinder19
+    3300020: Stromy_listy_hotove:pCylinder20
+    3300022: Stromy_listy_hotove:pCylinder3
+    3300024: Stromy_listy_hotove:pCylinder4
+    3300026: Stromy_listy_hotove:pCylinder5
+    3300028: Stromy_listy_hotove:pCylinder6
+    3300030: Stromy_listy_hotove:pCylinder8
+    3300032: Stromy_listy_hotove:pPlatonic10
+    3300034: Stromy_listy_hotove:pPlatonic11
+    3300036: Stromy_listy_hotove:pPlatonic14
+    3300038: Stromy_listy_hotove:pPlatonic15
+    3300040: Stromy_listy_hotove:pPlatonic16
+    3300042: Stromy_listy_hotove:pPlatonic17
+    3300044: Stromy_listy_hotove:pPlatonic8
+    3300046: Stromy_listy_hotove:pPlatonic9
+    4300000: Stromy_listy_hotove:pCylinder6
+    4300002: Stromy_listy_hotove:pCylinder5
+    4300004: Stromy_listy_hotove:pCylinder4
+    4300006: Stromy_listy_hotove:pCylinder3
+    4300008: Stromy_listy_hotove:pCylinder1
+    4300010: Stromy_listy_hotove:pCylinder8
+    4300012: Stromy_listy_hotove:pPlatonic8
+    4300014: Stromy_listy_hotove:pPlatonic9
+    4300016: Stromy_listy_hotove:pPlatonic10
+    4300018: Stromy_listy_hotove:pPlatonic11
+    4300020: Stromy_listy_hotove:pPlatonic14
+    4300022: Stromy_listy_hotove:pPlatonic15
+    4300024: Stromy_listy_hotove:pPlatonic16
+    4300026: Stromy_listy_hotove:pPlatonic17
+    4300028: Stromy_listy_hotove:pCylinder11
+    4300030: Stromy_listy_hotove:pCylinder12
+    4300032: Stromy_listy_hotove:pCylinder13
+    4300034: Stromy_listy_hotove:pCylinder14
+    4300036: Stromy_listy_hotove:pCylinder15
+    4300038: Stromy_listy_hotove:pCylinder17
+    4300040: Stromy_listy_hotove:pCylinder18
+    4300042: Stromy_listy_hotove:pCylinder19
+    4300044: Stromy_listy_hotove:pCylinder20
+    4300046: Stromy_listy_hotove:Parez
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
