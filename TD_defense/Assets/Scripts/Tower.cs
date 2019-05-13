@@ -18,9 +18,9 @@ public class Tower : MonoBehaviour
 
     public GameObject bullet;
     public Transform firepoint;
-    
-    
-   
+
+
+
 
 
 
@@ -28,8 +28,8 @@ public class Tower : MonoBehaviour
 
     private void Start()
     {
-       
-       
+
+
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
 
@@ -41,7 +41,7 @@ public class Tower : MonoBehaviour
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         float shortestDistance = range;
         GameObject nearestEnemy = null;
-        
+
 
         foreach (GameObject enemy in enemies)
         {
@@ -64,8 +64,8 @@ public class Tower : MonoBehaviour
             {
                 target = nearestEnemy.transform;
             }
-            
-            
+
+
         }
         else
         {
@@ -80,7 +80,7 @@ public class Tower : MonoBehaviour
     {
         if (target == null)
             return;
-       else if (firing == false)
+        else if (firing == false)
         {
             firing = true;
             StartCoroutine(Delay(target));
@@ -113,7 +113,7 @@ public class Tower : MonoBehaviour
     private void Fire(Transform enemyGameobject)
     {
         MoveOnPath HP = enemyGameobject.GetComponentInParent<MoveOnPath>();
-        GameObject BulletGO =  (GameObject)Instantiate(bullet, firepoint.position, gameObject.transform.rotation);
+        GameObject BulletGO = (GameObject)Instantiate(bullet, firepoint.position, gameObject.transform.rotation);
         Shot shot = BulletGO.GetComponent<Shot>();
 
         shot.tower = this.gameObject.GetComponent<Tower>();
@@ -122,7 +122,7 @@ public class Tower : MonoBehaviour
         {
             shot.seek(target);
         }
-       
+
 
 
     }
@@ -134,6 +134,21 @@ public class Tower : MonoBehaviour
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

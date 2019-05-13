@@ -15,12 +15,13 @@ public class Shot : MonoBehaviour
     public void seek(Transform _target)
     {
         target = _target;
+      //  FindObjectOfType<AudioManager>().PlaySound("shotTower");
     }
 
 
     void Start()
     {
-        
+       
     }
 
    
@@ -41,7 +42,8 @@ public class Shot : MonoBehaviour
         if (dir.magnitude <= distanceThisFrame)
         {
             HP.HP -= tower.damage;
-            HitTarget();
+            HitTarget();          
+           
             return;
         }
 

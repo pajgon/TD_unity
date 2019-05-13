@@ -16,22 +16,33 @@ public class Spawn : MonoBehaviour
     public int PathNummber = 1;
     bool CurrentWave = false;
 
-    private GameObject animal;
+    Despawn dev;
+
+    private GameObject JellikZluta;
+    private GameObject JellikCerna;
+    private GameObject JellikBila;
+    private GameObject golem;
 
 
-    private GameObject Path1;
-    private EditorPath Path1Editor;
+    private GameObject PathLeft1;
+    private EditorPath PathLeft1Editor;
 
 
-    private GameObject Path2;
-    private EditorPath Path2Editor;
+    private GameObject PathRight1;
+    private EditorPath PathRight1Editor;
+
+    private GameObject PathRight2;
+    private EditorPath PathRight2Editor;
+
+    private GameObject PathLeft2;
+    private EditorPath PathLeft2Editor;
 
 
     private GameObject m;
-    
 
 
-    IEnumerator SpawnDelay(GameObject unit, List<Transform> path ,float spawnTime ,float NummberUnits, EditorPath pathToFollow)
+
+    IEnumerator SpawnDelay(GameObject unit, List<Transform> path, float spawnTime, float NummberUnits, EditorPath pathToFollow)
     {
 
         CurrentWave = true;
@@ -46,40 +57,49 @@ public class Spawn : MonoBehaviour
         WaveNummber++;
     }
 
-    void SpawnUnits(GameObject unit,List<Transform> path, EditorPath pathToFollow)
+    void SpawnUnits(GameObject unit, List<Transform> path, EditorPath pathToFollow)
     {
         unit.name = "Enemy";
         unit.tag = "Enemy";
         unit.GetComponent<MoveOnPath>().PathToFollow = pathToFollow;
         Instantiate(unit, path[0].position, path[0].rotation);
-       
+
 
     }
 
 
     void Start()
     {
-        
-        animal = Resources.Load("Units/Animal") as GameObject;
+
+        JellikZluta = Resources.Load("Units/JellikZluta") as GameObject;
+        JellikCerna = Resources.Load("Units/JellikCerna") as GameObject;
+        JellikBila = Resources.Load("Units/JellikBila") as GameObject;
+        golem = Resources.Load("Units/Golem") as GameObject;
 
 
 
-        Path1 = Resources.Load("Paths/Path") as GameObject;
-        Path1Editor = Path1.GetComponent<EditorPath>();
+        PathLeft1 = Resources.Load("Paths/PathLeft1") as GameObject;
+        PathLeft1Editor = PathLeft1.GetComponent<EditorPath>();
 
-        Path2 = Resources.Load("Paths/PathRight") as GameObject;
-        Path2Editor = Path2.GetComponent<EditorPath>();
+        PathLeft2 = Resources.Load("Paths/PathLeft2") as GameObject;
+        PathLeft2Editor = PathLeft2.GetComponent<EditorPath>();
+
+        PathRight2 = Resources.Load("Paths/PathRight2") as GameObject;
+        PathRight2Editor = PathRight2.GetComponent<EditorPath>();
+
+        PathRight1 = Resources.Load("Paths/PathRight1") as GameObject;
+        PathRight1Editor = PathRight1.GetComponent<EditorPath>();
 
 
         arrayPoints = GetComponentsInChildren<Transform>();
         WaveNummber = 1;
 
         foreach (Transform path_obj in arrayPoints)
-        {    
+        {
             if (path_obj != this.transform)
             {
                 checkpoints.Add(path_obj);
-                
+
 
                 if (checkpoints.Count == arrayPoints.Length - 1)
                 {
@@ -87,22 +107,22 @@ public class Spawn : MonoBehaviour
 
                 }
 
-                
+
             }
         }
 
-        
-          
-        
-        
 
 
-     
-       
+
+
+
+
+
+
     }
-    
 
-    
+
+
     void Update()
     {
 
@@ -110,12 +130,12 @@ public class Spawn : MonoBehaviour
         {
             if (WaveNummber == 1 && CurrentWave == false)
             {
-                StartCoroutine(SpawnDelay(animal, checkpoints, 1, 5, Path1Editor));
+                StartCoroutine(SpawnDelay(JellikCerna, checkpoints, 5, 2, PathLeft1Editor));
             }
 
             if (WaveNummber == 2 && CurrentWave == false)
             {
-                StartCoroutine(SpawnDelay(animal, checkpoints, 3, 2, Path1Editor));
+                StartCoroutine(SpawnDelay(JellikZluta, checkpoints, 3, 2, PathLeft1Editor));
             }
 
         }
@@ -123,15 +143,43 @@ public class Spawn : MonoBehaviour
         {
             if (WaveNummber == 1 && CurrentWave == false)
             {
-                StartCoroutine(SpawnDelay(animal, checkpoints, 3, 2, Path2Editor));
+                StartCoroutine(SpawnDelay(golem, checkpoints, 3, 2, PathRight1Editor));
             }
 
             if (WaveNummber == 2 && CurrentWave == false)
             {
-                StartCoroutine(SpawnDelay(animal, checkpoints, 1, 5, Path2Editor));
+                StartCoroutine(SpawnDelay(JellikBila, checkpoints, 1, 5, PathRight1Editor));
             }
         }
-       
+        else if (PathNummber == 3)
+        {
+            if (WaveNummber == 1 && CurrentWave == false)
+            {
+                StartCoroutine(SpawnDelay(JellikBila, checkpoints, 3, 2, PathRight2Editor));
+            }
+
+
+            if (WaveNummber == 2 && CurrentWave == false)
+            {
+                StartCoroutine(SpawnDelay(golem, checkpoints, 1, 5, PathRight2Editor));
+            }
+        }
+        else if (PathNummber == 4)
+        {
+
+            if (WaveNummber == 1 && CurrentWave == false)
+            {
+                StartCoroutine(SpawnDelay(JellikZluta, checkpoints, 3, 2, PathLeft2Editor));
+            }
+
+
+            if (WaveNummber == 2 && CurrentWave == false)
+            {
+                StartCoroutine(SpawnDelay(JellikCerna, checkpoints, 1, 5, PathLeft2Editor));
+            }
+
+        }
+
 
     }
 
@@ -140,13 +188,14 @@ public class Spawn : MonoBehaviour
     {
         float scale = 1.3f;
         obj.AddComponent<BoxCollider>();
-        BoxCollider collider =  obj.GetComponent<BoxCollider>();
+        BoxCollider collider = obj.GetComponent<BoxCollider>();
         collider.isTrigger = true;
-        collider.size = new Vector3(scale ,scale , scale);
+        collider.size = new Vector3(scale, scale, scale);
         Spawn spawn = obj.GetComponentInParent<Spawn>();
-        
+        obj.AddComponent<Despawn>();
+
     }
-    
+
 
 
 

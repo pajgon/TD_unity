@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class SellandUpgrade : MonoBehaviour
 {
-    
+
     GameObject[] TowersType;
     GameObject[] Towers;
-    
-    
+
+
 
 
     public BuildBuilding build;
@@ -19,8 +19,8 @@ public class SellandUpgrade : MonoBehaviour
     private float CurrentLevel;
     private string TowerType;
 
-   
-    
+
+
     void Start()
     {
         build = GetComponent<BuildBuilding>();
@@ -28,9 +28,9 @@ public class SellandUpgrade : MonoBehaviour
 
         //nacte veze ve slozkach
         Towers = Resources.LoadAll<GameObject>("Towers");
-        
 
-        
+
+
 
 
     }
@@ -40,19 +40,23 @@ public class SellandUpgrade : MonoBehaviour
         CurrentLevel = build.Tower.GetComponent<Tower>().level;
         TowerType = build.Tower.GetComponent<Tower>().TowerType;
 
-        
+
+
+
 
         foreach (GameObject TowerModel in Towers)
         {
-            
+
             if (TowerType.Equals(TowerModel.GetComponent<Tower>().TowerType) && CurrentLevel + 1 == TowerModel.GetComponent<Tower>().level)
             {
-                
-                ui.buildTower(TowerModel, build.TowerPosition, ui.UpgradeNode, build.Tower, build.TowerCanvasclicked);
 
+
+             
+                ui.buildTower(TowerModel, build.Tower.GetComponent<Transform>().position, ui.UpgradeNode, build.Tower, build.TowerCanvasclicked);
+              
 
             }
-                       
+
         }
 
     }
@@ -65,8 +69,8 @@ public class SellandUpgrade : MonoBehaviour
         build.Tower.GetComponent<Tower>().PlanePlace.SetActive(true);
 
         Destroy(build.Tower);
-        
-       
+
+
 
 
     }

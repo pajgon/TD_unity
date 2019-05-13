@@ -1,0 +1,8 @@
+[0509/021942.713:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\jellik\AppData\Local\Google\Chrome\User Data\Crashpad\reports\b43c39f8-bc52-4a81-9985-28bc410786aa.dmp: Proces nemá pøístup k souboru, nebo jej právì vyuívá jinı proces. (0x20)
+[0509/021943.955:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: Pøesmìrování bylo ukonèeno. (0x6D)
+[0509/022000.886:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\jellik\AppData\Local\Google\Chrome\User Data\Crashpad\reports\04b0f420-e42f-4948-b5d4-fe3364527c87.dmp: Proces nemá pøístup k souboru, nebo jej právì vyuívá jinı proces. (0x20)
+[0509/022002.115:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: Pøesmìrování bylo ukonèeno. (0x6D)
+[0509/022136.239:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\jellik\AppData\Local\Google\Chrome\User Data\Crashpad\reports\c576df5e-32ba-412d-b2cc-4753a1a97310.dmp: Proces nemá pøístup k souboru, nebo jej právì vyuívá jinı proces. (0x20)
+[0509/022137.482:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: Pøesmìrování bylo ukonèeno. (0x6D)
+[0509/022150.978:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\jellik\AppData\Local\Google\Chrome\User Data\Crashpad\reports\9a3963e8-febd-44e4-8064-1adcb4c7dc03.dmp: Proces nemá pøístup k souboru, nebo jej právì vyuívá jinı proces. (0x20)
+[0509/022152.203:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: Pøesmìrování bylo ukonèeno. (0x6D)

@@ -11,7 +11,7 @@ public class UI : MonoBehaviour
 
 
 
-    
+
     private BuildBuilding build;
     private SellandUpgrade sellAndupgrade;
 
@@ -97,25 +97,28 @@ public class UI : MonoBehaviour
     private float TopPanelHeight = 40f;
 
     public Button upgrade;
+
+    public Button Upgrade;
     
+
 
 
 
     Font ArialFont;
 
-   
+
 
     // stavba veze na pozici stavebni parcely
-   public void buildTower(GameObject prefab, Vector3 position, GameObject canvas, GameObject destroy, bool clicked)
+    public void buildTower(GameObject prefab, Vector3 position, GameObject canvas, GameObject destroy, bool clicked)
     {
         if (Money >= prefab.GetComponent<Tower>().cost)
         {
 
             if (destroy.tag == "Tower")
             {
-                 PlanePlace = destroy.GetComponent<Tower>().PlanePlace;
-                 Destroy(destroy);
-                 prefab.GetComponent<Tower>().PlanePlace = PlanePlace;
+                PlanePlace = destroy.GetComponent<Tower>().PlanePlace;
+                Destroy(destroy);
+                prefab.GetComponent<Tower>().PlanePlace = PlanePlace;
             }
             else
             {
@@ -124,15 +127,15 @@ public class UI : MonoBehaviour
                 destroy.SetActive(false);
             }
 
-
+            prefab.tag = "Tower";
             Instantiate(prefab, position, Quaternion.identity);
             Debug.Log("objek tam je   " + prefab.GetComponent<Tower>().PlanePlace);
-            
 
-            prefab.tag = "Tower";
+
+            
             Money = Money - prefab.GetComponent<Tower>().cost;
             canvas.SetActive(false);
-            
+
 
         }
         else
@@ -140,12 +143,12 @@ public class UI : MonoBehaviour
             canvas.SetActive(true);
             clicked = true;
         }
-        
+
     }
 
     void CreateCanvas(GameObject Node, GameObject canvas, string name)
     {
-        Node.name = name + "Pos" ;
+        Node.name = name + "Pos";
         canvas.transform.parent = Node.transform;
         Node.transform.rotation = Quaternion.Euler(angleX, 0, 0);
         canvas.name = name;
@@ -201,7 +204,7 @@ public class UI : MonoBehaviour
         button.GetComponent<Button>().targetGraphic = button.GetComponent<Image>();
 
         Button buttonB = button.GetComponent<Button>();
-        
+
 
 
 
@@ -216,29 +219,23 @@ public class UI : MonoBehaviour
 
 
 
-/*
-        text.name = "Butt" + ButtText + "Text";
-
-
-        text.transform.parent = button.transform;
-
-
-        text.AddComponent<RectTransform>();
-        text.AddComponent<Text>().text = ButtText;
-        text.GetComponent<Text>().font = ArialFont;
-        text.GetComponent<Text>().fontSize = 30;
-        text.GetComponent<Text>().color = Color.yellow;
-        text.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;
-        RectTransform textSize = text.GetComponent<RectTransform>();
-        textSize.anchoredPosition3D = new Vector3(0f, 0f, 0f);
-        textSize.sizeDelta = new Vector2(500f, 500f);
-        textSize.localScale = new Vector3(1f, 1f, 1f);
-        textSize.anchorMin = new Vector2(0.5f, 0.5f);
-        textSize.anchorMax = new Vector2(0.5f, 0.5f);
-        textSize.rotation = Quaternion.Euler(angleX, 0, 0);
-
-
-    */
+        /*
+                text.name = "Butt" + ButtText + "Text";
+                text.transform.parent = button.transform;
+                text.AddComponent<RectTransform>();
+                text.AddComponent<Text>().text = ButtText;
+                text.GetComponent<Text>().font = ArialFont;
+                text.GetComponent<Text>().fontSize = 30;
+                text.GetComponent<Text>().color = Color.yellow;
+                text.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;
+                RectTransform textSize = text.GetComponent<RectTransform>();
+                textSize.anchoredPosition3D = new Vector3(0f, 0f, 0f);
+                textSize.sizeDelta = new Vector2(500f, 500f);
+                textSize.localScale = new Vector3(1f, 1f, 1f);
+                textSize.anchorMin = new Vector2(0.5f, 0.5f);
+                textSize.anchorMax = new Vector2(0.5f, 0.5f);
+                textSize.rotation = Quaternion.Euler(angleX, 0, 0);
+            */
 
 
     }
@@ -264,7 +261,7 @@ public class UI : MonoBehaviour
         textSize.anchorMax = new Vector2(1f, 1f);
     }
 
-    void CreatePanel(GameObject panel, GameObject parent, string name , Sprite sprite)
+    void CreatePanel(GameObject panel, GameObject parent, string name, Sprite sprite)
     {
         panel.transform.parent = parent.transform;
 
@@ -279,10 +276,10 @@ public class UI : MonoBehaviour
 
         PanelImage.color = new Color32(255, 255, 255, 255);
 
-        
+
     }
 
-   
+
 
 
 
@@ -294,15 +291,15 @@ public class UI : MonoBehaviour
         WoodPanel = Resources.Load<Sprite>("Sprites/Wood") as Sprite;
         Dirt = Resources.Load<Sprite>("Sprites/Dirt") as Sprite;
         Heart = Resources.Load<Sprite>("Sprites/heart") as Sprite;
-        TowerWR = Resources.Load<Sprite>("Sprites/TowerWR") as Sprite;
-        TowerBW = Resources.Load<Sprite>("Sprites/TowerBW") as Sprite;
-        TowerYR = Resources.Load<Sprite>("Sprites/TowerYR") as Sprite;
-        SellSprite = Resources.Load<Sprite>("Sprites/Coin") as Sprite;
-        UpgradeSprite = Resources.Load<Sprite>("Sprites/Dirt") as Sprite;
+        TowerWR = Resources.Load<Sprite>("Sprites/OrangeLv1_erb") as Sprite;
+        TowerBW = Resources.Load<Sprite>("Sprites/BlueLv1_erb") as Sprite;
+        TowerYR = Resources.Load<Sprite>("Sprites/RedLv1_erb") as Sprite;
+          SellSprite = Resources.Load<Sprite>("Sprites/SellButton2") as Sprite;
+        UpgradeSprite = Resources.Load<Sprite>("Sprites/UpgradeButton2") as Sprite;
 
 
 
-        GameObject YRMageTowerLv1Model =  Resources.Load("Towers/TowersYR/YRVezLv1Mage") as GameObject;
+        GameObject YRMageTowerLv1Model = Resources.Load("Towers/TowersYR/YRVezLv1Mage") as GameObject;
         GameObject BWMageTowerLv1Model = Resources.Load("Towers/TowersBW/BWMageTowerLv1") as GameObject;
         GameObject WRMageTowerLv1Model = Resources.Load("Towers/TowersWR/WRMageTowerLv1") as GameObject;
 
@@ -311,7 +308,7 @@ public class UI : MonoBehaviour
 
         build = gameObject.GetComponent<BuildBuilding>();
         sellAndupgrade = gameObject.GetComponent<SellandUpgrade>();
-        
+
 
         BWMageTowerLv1 = new GameObject();
         BWMageTowerLv1Text = new GameObject();
@@ -361,23 +358,23 @@ public class UI : MonoBehaviour
 
 
 
-        
 
-      
-        
+
+
+
         // vytvori novy kanvas na vlozeni dvou tlacitek lze s nim pohybovat
 
         CreateCanvas(BuildNode, BuildCan, BuildCanName);
         CanvasSetSize(BuildCan);
 
-     
+
         // vlozi do kanvasu dve tlacitka predem nastavena v metode
         CreateButton(BuildCan, BWMageTowerLv1, BWMageTowerLv1Text, BWMageTowerLv1Name);
         CreateButton(BuildCan, YRMageTowerLv1, YRMageTowerLv1Text, YRMageTowerLv1Name);
         CreateButton(BuildCan, WRMageTowerLv1, WRMageTowerLv1Text, WRMageTowerLv1Name);
 
-       
-        
+
+
         //opet vytvori novy kanvas stejneho typu
         CreateCanvas(UpgradeNode, UpgradeCan, UpgradeCanName);
         CanvasSetSize(UpgradeCan);
@@ -404,14 +401,14 @@ public class UI : MonoBehaviour
 
 
 
-
+        //3 tlacitka pokazde postavi 1. level dane veze
 
         Button ButtWRMageTowerLv1 = WRMageTowerLv1.GetComponent<Button>();
-       ButtWRMageTowerLv1.GetComponent<Image>().sprite = TowerWR;
+        ButtWRMageTowerLv1.GetComponent<Image>().sprite = TowerWR;
         ButtWRMageTowerLv1.onClick.AddListener(() => { buildTower(WRMageTowerLv1Model, build.PlanePosition, BuildNode, build.plane, build.PlaneCanvasclicked); });
 
         Button ButtYRMageTowerLv1 = YRMageTowerLv1.GetComponent<Button>();
-       ButtYRMageTowerLv1.GetComponent<Image>().sprite = TowerYR;
+        ButtYRMageTowerLv1.GetComponent<Image>().sprite = TowerYR;
         ButtYRMageTowerLv1.onClick.AddListener(() => { buildTower(YRMageTowerLv1Model, build.PlanePosition, BuildNode, build.plane, build.PlaneCanvasclicked); });
 
 
@@ -419,11 +416,13 @@ public class UI : MonoBehaviour
         BWMageTowerLv1_Model.GetComponent<Image>().sprite = TowerBW;
         BWMageTowerLv1_Model.onClick.AddListener(() => { buildTower(BWMageTowerLv1Model, build.PlanePosition, BuildNode, build.plane, build.PlaneCanvasclicked); });
 
-
+        //tlacitko po kterem se spusti akci upgrade veze
         Button Upgrade = UpgradeButt.GetComponent<Button>();
         Upgrade.GetComponent<Image>().sprite = UpgradeSprite;
         Upgrade.onClick.AddListener(() => { sellAndupgrade.Upgrade(); });
 
+
+        //tlacitko po kterem se spusti akci prodani veze
         Button Sell = SellButt.GetComponent<Button>();
         Sell.GetComponent<Image>().sprite = SellSprite;
         Sell.onClick.AddListener(() => { sellAndupgrade.Sell(); });
@@ -457,21 +456,21 @@ public class UI : MonoBehaviour
         TopPanelPos.anchorMax = new Vector2(0, 1);
         TopPanelPos.anchorMin = new Vector2(0, 1);
 
-       
+
 
         TopPanelPos.position = worldcorners[1] - TopPanelCorners[1];
 
         //Panel v kterem se nachazi panel s obrazkem penizku a ukazujici pocet
-        CreatePanel(TopPanelCoinPlace, TopPanel,TopPanelCoinPlaceName, SteelBackground);
+        CreatePanel(TopPanelCoinPlace, TopPanel, TopPanelCoinPlaceName, SteelBackground);
 
         RectTransform TopPanelCoinPlacePos = TopPanelCoinPlace.GetComponent<RectTransform>();
-        
+
         TopPanelCoinPlacePos.anchorMax = new Vector2(0, 1);
         TopPanelCoinPlacePos.anchorMin = new Vector2(0, 1);
 
-        TopPanelCoinPlacePos.sizeDelta = new Vector2(TopPanelWidth/2,TopPanelHeight);
+        TopPanelCoinPlacePos.sizeDelta = new Vector2(TopPanelWidth / 2, TopPanelHeight);
 
-        TopPanelCoinPlacePos.anchoredPosition = new Vector2(TopPanelCoinPlacePos.sizeDelta.x/2 , -TopPanelCoinPlacePos.sizeDelta.y/2);
+        TopPanelCoinPlacePos.anchoredPosition = new Vector2(TopPanelCoinPlacePos.sizeDelta.x / 2, -TopPanelCoinPlacePos.sizeDelta.y / 2);
 
 
         // panel v kterem je obrazek penizku
@@ -495,7 +494,7 @@ public class UI : MonoBehaviour
         TopPanelCoinCountPos.anchorMax = new Vector2(1, 1);
         TopPanelCoinCountPos.anchorMin = new Vector2(1, 1);
 
-        TopPanelCoinCountPos.anchoredPosition = new Vector2( - TopPanelCoinPos.sizeDelta.x, -TopPanelCoinPos.sizeDelta.y / 2);
+        TopPanelCoinCountPos.anchoredPosition = new Vector2(-TopPanelCoinPos.sizeDelta.x, -TopPanelCoinPos.sizeDelta.y / 2);
 
         TopPanelCoinCountPos.sizeDelta = new Vector2(TopPanelWidth / 2 - TopPanelWidth / 6, TopPanelHeight);
 
@@ -519,7 +518,7 @@ public class UI : MonoBehaviour
 
         TopPanelLifePlacePos.sizeDelta = new Vector2(TopPanelWidth / 2, TopPanelHeight);
 
-        TopPanelLifePlacePos.anchoredPosition = new Vector2(- TopPanelLifePlacePos.sizeDelta.x / 2, -TopPanelLifePlacePos.sizeDelta.y / 2);
+        TopPanelLifePlacePos.anchoredPosition = new Vector2(-TopPanelLifePlacePos.sizeDelta.x / 2, -TopPanelLifePlacePos.sizeDelta.y / 2);
 
 
 
@@ -546,7 +545,7 @@ public class UI : MonoBehaviour
         TopPanelLifePlaceNummberPos.anchorMax = new Vector2(1, 1);
         TopPanelLifePlaceNummberPos.anchorMin = new Vector2(1, 1);
 
-        TopPanelLifePlaceNummberPos.anchoredPosition = new Vector2(- TopPanelLifePlaceNummberPos.sizeDelta.x/2, -TopPanelLifePlaceNummberPos.sizeDelta.y/5);
+        TopPanelLifePlaceNummberPos.anchoredPosition = new Vector2(-TopPanelLifePlaceNummberPos.sizeDelta.x / 2, -TopPanelLifePlaceNummberPos.sizeDelta.y / 5);
 
         TopPanelLifePlaceNummberPos.sizeDelta = new Vector2(TopPanelWidth / 2 - TopPanelWidth / 6, TopPanelHeight);
 
@@ -586,6 +585,6 @@ public class UI : MonoBehaviour
 
     }
 
-    
+
 
 }

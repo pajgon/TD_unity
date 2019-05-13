@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Despawn : MonoBehaviour
 {
-   
+
     private UI ui;
+    public Spawn spawn;
 
     private void Start()
     {
@@ -13,18 +14,18 @@ public class Despawn : MonoBehaviour
         camera = GameObject.FindGameObjectWithTag("MainCamera");
 
         ui = camera.GetComponent<UI>();
-        
+
     }
 
     public void OnTriggerEnter(Collider enemy)
     {
         Destroy(enemy.gameObject);
         ui.Lives--;
-        
-        
-       
+
+
+
     }
-    
+
 
 
 }

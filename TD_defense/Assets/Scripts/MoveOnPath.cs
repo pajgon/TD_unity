@@ -12,13 +12,13 @@ public class MoveOnPath : MonoBehaviour
 
     public int CurrenWayPointID = 0;
     public float speed = 2f;
-    private float reachDistance = 1f;
+    public float reachDistance = 1f;
     public float rotationspeed = 5.0f;
     public string pathName;
     public float HP = 50f;
     public float cost = 5;
-    
-  
+
+
 
 
 
@@ -32,11 +32,14 @@ public class MoveOnPath : MonoBehaviour
     {
 
         GameObject camera = new GameObject();
-        camera = GameObject.FindGameObjectWithTag("MainCamera");
+     camera = GameObject.FindGameObjectWithTag("MainCamera");
 
-        ui = camera.GetComponent<UI>();
+       ui = camera.GetComponent<UI>();
 
         last_position = transform.position;
+        
+
+
     }
 
     

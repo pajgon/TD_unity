@@ -14,7 +14,7 @@ public class BuildingPlace : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = rayColor;
-        Gizmos.DrawCube(gameObject.transform.position, new Vector3(1, 0.1f, 1));
+        Gizmos.DrawCube(gameObject.transform.position, new Vector3(2.785863f, 0.1f, 2.785863f));
     }
 
 
@@ -36,7 +36,7 @@ public class BuildingPlace : MonoBehaviour
         
         // nastaveni velikosti stavebni parcely
         Transform transform = Place.GetComponent<Transform>();
-        Vector3 scale = new Vector3 (0.1f, 0.1f, 0.1f);
+        Vector3 scale = new Vector3 (0.2777783f, 0.1f, 0.2778657f);
         transform.localScale = scale;
 
         MeshFilter MeshF = Place.GetComponent<MeshFilter>();
